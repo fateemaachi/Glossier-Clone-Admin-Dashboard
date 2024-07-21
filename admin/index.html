@@ -292,7 +292,7 @@
             <h3>849</h3>
           </div>
         </div>
-        <div class="item add-product">
+        <div class="item add-product" id="addBtn">
           <div>
             <span class="material-symbols-outlined">add</span>
             <h3>Add Product</h3>
@@ -303,6 +303,41 @@
      </div>
     
   </div>
+  
+   <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+      <div class="modal-header">
+        <button id="cancel">Cancel</button>
+        <button id="add">Add Product</button>
+      </div>
+      <div class="modal-body">
+        <div class="mb">
+          <label for="uploadImage">Product Image</label>
+          <input type="file" id="uploadImage">
+        </div>
+        <div class="mb">
+          <label for="productName">Product Name</label>
+          <input type="text" id="productName" placeholder="add product name" size="80" required>
+        </div>
+        <div class="mb">
+          <label for="productPrice">Product Price</label>
+          <input type="text" id="productPrice" placeholder="add product price" size="80" required>
+        </div>
+        <div class="mb">
+          <label for="productQty">Product Price</label>
+          <input type="text" id="productQty" placeholder="add product quantity" size="80" required>
+        </div>
+        <div class="mb">
+          <label for="productDescription">Product Description</label>
+          <textarea id="productDescription" placeholder="add a description" name="productDescription" required></textarea>
+        </div>
+    </div>
+  </div>
+
+</div>
 
 
   <script src="script.js"></script>

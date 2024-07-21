@@ -435,16 +435,109 @@ main .recent-orders a{
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .right .sales-analytics .add-product div{
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  cursor: pointer;
 }
 .right .sales-analytics .add-product div h3{
   font-weight: 500;
 }
+
+/*====MODAL======*/
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 50px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 80px;
+  border: 1px solid #888;
+  width: 60%;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+textarea[name='productDescription'] {
+  outline: none;
+  width: 100%; 
+  padding: 8px; 
+  box-sizing: border-box; 
+  font-size: 1rem;
+  border: 1px solid #ccc0;
+  background-color: #cccccc2e; 
+  border-radius: 4px; 
+}
+label {
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+input[type="text"] {
+  width: 100%; 
+  padding: 8px; 
+  border: 1px solid #ccc0;
+  background-color: #cccccc2e;
+  font-size: 1rem; 
+  border-radius: 4px;
+  outline: none;
+}
+#cancel, #add{
+  background-color: #222c;
+  color: #fff;
+  padding: 8px 35px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 16px;
+  color: white;
+}
+.modal-body {padding: 2px 16px;}
+.margin-bottom{
+  margin-bottom: 10px;
+}
+
+
 /*=======MEDIA SCREEN======*/
 @media screen and (max-width:1200px) {
   .container{
