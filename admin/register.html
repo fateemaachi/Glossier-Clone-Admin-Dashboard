@@ -15,153 +15,6 @@
   <title>Create Account-Glossier</title>
 </head>
 <body>
-   <!--insert nav here-->
-  <div class="nav">
-    <header>
-      <span>
-        <a href="#">limited edition balm quintet:</a> 5 flavors + sticker
-        sheet!</span
-      >
-    </header>
-    <nav>
-      <div class="logoContainer">
-        <a href="index.html" class="flex column justify-center align-center"
-          ><img src="./images/logo.png" alt="" class="logo" />
-        </a>
-        <p class="hideText">you look good.</p>
-      </div>
-      <ul>
-        <li>skincare</li>
-        <li>makeup</li>
-        <li>balms</li>
-        <li>body</li>
-        <li id="fragrance">fragrance</li>
-        <li>glossier goods</li>
-        <li>sets</li>
-      </ul>
-      <ul>
-        <li><i class="fa-solid fa-globe" style="margin-right: 5px"></i>Ng</li>
-        <li>search</li>
-        <li>stores</li>
-        <li><a href="login.html">log in</a></li>
-        <li id="bag">bag</li>
-      </ul>
-    </nav>
-    <section class="fragrance">
-      <!-- <div class="flex" style="gap: 100px"> -->
-      <div>
-        <ul>
-          <li><a href="products.html">Shop All</a></li>
-          <li>Bestsellers</li>
-        </ul>
-        <div style="margin-top: 30px">
-          <p style="color: #0600ff; margin-bottom: 10px">New</p>
-          <ul>
-            <li>Limited Edition Summer Collection</li>
-            <li>Lip Line</li>
-            <li>Balm Dotcom Original Formula</li>
-          </ul>
-        </div>
-      </div>
-      <ul>
-        <li>Glossier You</li>
-        <li>Glossier You Travel Spray</li>
-        <li>All fragrance</li>
-      </ul>
-      <!-- </div> -->
-      <div class="fragranceImg">
-        <img src="./images/fragranceNav.avif" alt="" />
-        <div class="flex justify-between align-center">
-          <button class="btn-link">Shop all fragrance</button>
-          <i class="fa-solid fa-arrow-right"></i>
-        </div>
-      </div>
-    </section>
-    <section class="cartModal">
-      <div class="sideCart">
-        <div class="sideCart_top flex justify-between">
-          <a
-            href="index.html"
-            class="cartLogo flex justify-center align-center"
-            ><img src="./images/logo.png" alt="" />
-          </a>
-          <ul class="flex align-center" style="gap: 50px">
-            <li>Bag</li>
-            <li id="close"><i class="fa-solid fa-xmark"></i></li>
-          </ul>
-        </div>
-
-        <div class="sideCart_bottom flex justify-between column">
-          <div class="">
-            <h4>Shopping bag</h4>
-            <p class="freeShipping">
-              ₦105,910 away from free express shipping
-            </p>
-
-            <div class="cartCard">
-              <div class="cartImage">
-                <img src="./images/cartItem-1.avif" alt="" />
-              </div>
-              <div class="cartCard_right flex column justify-between">
-                <div class="cartCard_top flex justify-between">
-                  <p>Utility Sling</p>
-                  <p>₦39,700</p>
-                </div>
-                <div class="cartCard_bottom flex justify-between">
-                  <div class="count">1</div>
-                  <button class="btn-remove">remove</button>
-                </div>
-              </div>
-            </div>
-            <div
-              class="flex justify-between padding-10"
-              style="background-color: #f0f0f0"
-            >
-              <p>Subtotal</p>
-              <p>₦39,700</p>
-            </div>
-            <div
-              class="flex justify-between padding-10"
-              style="background-color: #f7f7f7"
-            >
-              <p>Tax calculated in checkout</p>
-              <p>₦39,700</p>
-            </div>
-            <p
-              class="padding-10"
-              style="
-                font-size: 12px;
-                color: #666;
-                letter-spacing: 0.5px;
-                line-height: 15px;
-              "
-            >
-              Shipping and promotions calculated in checkout. <br /><br />
-              Sales tax amount shown in checkout is a best estimate and may
-              differ from amount actually charged and shown on Order
-              Confirmation email.
-            </p>
-          </div>
-          <div class="cartButton padding-10">
-            <div class="flex justify-between" style="margin-bottom: 10px">
-              <p>Estimated total</p>
-              <p>₦39,700</p>
-            </div>
-            <a
-              class="btn btn-tertiary"
-              href="./checkout.html"
-              style="display: inline-block"
-              >checkout</a
-            >
-            <p style="font-size: 12px; color: #666; margin-top: 10px">
-              By checking out, you agree to our Terms of Use and Privacy
-              Policy.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
   <div class="registration">
     <h2>Create an account</h2>
     <form id="regForm" >
@@ -177,13 +30,29 @@
         <input type="text" placeholder="Email" id="email2" size="60">
         <p id="errEmail" class="hide">Please enter an email</p>
       </div>
-      <div class="number mb hide">
+      <div class="number mb">
         <input type="text" placeholder="Mobile Number" id="number" size="60">
         <p id="errNum" class="hide">Please enter a valid international phone number</p>
       </div>
       <div class="storename mb">
-        <input type="text" placeholder="Last Name" id="lName" size="60">
-        <p id="errlName" class="hide">Please enter a last name</p>
+        <input type="text" placeholder=" Store Name" id="storeName" size="60">
+        <p id="errsName" class="hide">Please enter a store name</p>
+      </div>
+      <div class="descp mb">
+        <input type="text" placeholder="enter description" id="descp" size="60">
+        <p id="errDescp" class="hide">Please enter a store description</p>
+      </div>
+      <div class="icon mb">
+        <input type="text" placeholder="enter icon" id="icon" size="60">
+        <p id="errIcon" class="hide">Please enter a store icon</p>
+      </div>
+      <div class="banner mb">
+        <input type="text" placeholder="enter banner image" id="banner" size="60">
+        <p id="errBanner" class="hide">Please enter a store banner</p>
+      </div>
+      <div class="secNum mb ">
+        <input type="text" placeholder="Other Numbers" id="numbers" size="60">
+        <p id="errNum" class="hide">Please enter a valid international phone number</p>
       </div>
       <div class="password mb">
         <input type="password" placeholder="Password" id="password" size="60">
@@ -214,168 +83,6 @@
   
     </form>
   </div>
-  
-  
-  
-  <footer>
-    <div class="footer-top flex justify-btw">
-      <p class="top-msg">At Glossier, we make products inspired by real life, embracing the ethos of Skin First. Makeup<br/> Second™. We believe beauty is about having fun, celebrating freedom, and being present. No<br/> matter where you are in your beauty journey, you look good.</p>
-      <div class="email">
-        <input type="email" placeholder="Email Address" id="email">
-        <p id ="err-msg" class="mb2">This field is required</p>
-        <p>You can unsubscribe anytime. For more details, review our <span class="privacy-policy">Privacy Policy</span></p>
-      </div>
-      <button type="submit" id ="subBtn" style="height: 46px;">Submit</button>
-    </div>
-    <div class="footer-middle">
-      <div class="footer-grid">
-        <p>HOW CAN WE HELP?</p>
-        <ul>
-          <li><a href="#" style="text-decoration: underline;">Contact</a></li>
-          <li><a href="#">Returns & exchanges</a></li>
-          <li><a href="#">Help & FAQ</a></li>
-          <li><a href="#">International</a></li>
-          <li><a href="#">Responsible disclosure</a></li>
-        </ul>
-      </div>
-      <div class="footer-grid">
-        <p>ABOUT GLOSSIER</p>
-        <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Affiliates</a></li>
-          <li><a href="#">Company Blog</a></li>
-          <li><a href="#">Glossier for Good</a></li>
-          <li><a href="#">Glossier Grant Program</a></li>
-        </ul>
-      </div>
-      <div class="footer-grid">
-        <p>STORES</p>
-        <ul>
-          <li><a href="#">Find your store</a></li>
-        </ul>
-      </div>
-      <div class="footer-grid">
-        <p>SOCIAL</p>
-        <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Pinterest</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Youtube</a></li>
-          <li><a href="#">TikTok</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-middle" style="gap: 65px;">
-      <div class="footer-grid">
-        <ul>
-          <li><a href="#">A</a></li>
-          <li><a href="#">After Baume</a></li>
-          <li><a href="#">B</a></li>
-          <li><a href="#">Balm Dotcom</a></li>
-          <li><a href="#">Body Hero Exfoliating Bar</a></li>
-          <li><a href="#">Body Hero Daily Oil Wash</a></li>
-          <li><a href="#">Body Hero Daily Perfecting Lotion</a></li>
-          <li><a href="#">Body Hero Dry-Touch Oil Mist</a></li>
-          <li><a href="#">Boy Brow</a></li>
-          <li><a href="#">Brow Flick</a></li>
-          <li><a href="#">C</a></li>
-          <li><a href="#">Cleanser Concentrate</a></li>
-          <li><a href="#">Cloud Paint</a></li>
-          <li><a href="#">D</a></li>
-          <li><a href="#">Deodorant</a></li>
-          <li><a href="#">Deodorant Refill Stick</a></li>
-          <li><a href="#">Duffle Bag</a></li>
-          <li><a href="#">E</a></li>
-        </ul>
-      </div>
-      <div class="footer-grid">
-        <ul>
-          <li><a href="#">Embroidered Sage Hoodie</a></li>
-          <li><a href="#">Eyeshadow Brush</a></li>
-          <li><a href="#">F</a></li>
-          <li><a href="#">Field Greens Blanket</a></li>
-          <li><a href="#">Full Orbit</a></li>
-          <li><a href="#">Futuredew</a></li>
-          <li><a href="#">G</a></li>
-          <li><a href="#">G Suit</a></li>
-          <li><a href="#">Generation G</a></li>
-          <li><a href="#">Glossier Candles</a></li>
-          <li><a href="#">Glossier Sweatshirt</a></li>
-          <li><a href="#">Glossier You</a></li>
-          <li><a href="#">Glossier You Travel Spray</a></li>
-          <li><a href="#">Glossier You Solid</a></li>
-          <li><a href="#">Glossier You Solid Refill</a></li>
-          <li><a href="#">Glossier Utility Bag</a></li>
-          <li><a href="#">H</a></li>
-          <li><a href="#">Haloscope</a></li>
-        </ul>
-      </div>
-      <div class="footer-grid">
-        <ul>
-          <li><a href="#">Hand Cream</a></li>
-          <li><a href="#">I</a></li>
-          <li><a href="#">Invisible Shield SPF50</a></li>
-          <li><a href="#">Invisible Shield SPF35</a></li>
-          <li><a href="#">J</a></li>
-          <li><a href="#">K</a></li>
-          <li><a href="#">L</a></li>
-          <li><a href="#">Lash Slick</a></li>
-          <li><a href="#">Lip Line</a></li>
-          <li><a href="#">Lidstar</a></li>
-          <li><a href="#">Limited Edition Embroidered Cream Hoodie</a></li>
-          <li><a href="#">Lip Gloss</a></li>
-          <li><a href="#">M</a></li>
-          <li><a href="#">Milky Jelly Cleanser</a></li>
-          <li><a href="#">Milky Jelly Cleansing Bar</a></li>
-          <li><a href="#">Milky Oil</a></li>
-          <li><a href="#">Monochromes</a></li>
-          <li><a href="#">Monochromes Refill</a></li>
-        </ul>
-      </div>
-      <div class="footer-grid">
-        <ul>
-          <li><a href="#">N</a></li>
-          <li><a href="#">No. 1 Pencil</a></li>
-          <li><a href="#">O</a></li>
-          <li><a href="#">P</a></li>
-          <li><a href="#">Perfecting Skin Tint</a></li>
-          <li><a href="#">Priming Moisturizer</a></li>
-          <li><a href="#">Priming Moisturizer Balance</a></li>
-          <li><a href="#">Priming Moisturizer Rich</a></li>
-          <li><a href="#">Pro Tip</a></li>
-          <li><a href="#">Q</a></li>
-          <li><a href="#">R</a></li>
-          <li><a href="#">S</a></li>
-          <li><a href="#">Skywash</a></li>
-          <li><a href="#">Solution</a></li>
-          <li><a href="#">Stretch Fluid Foundation</a></li>
-          <li><a href="#">Stretch Balm Concealer</a></li>
-          <li><a href="#">Stretch Face Brush</a></li>
-          <li><a href="#">Super Bounce</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom flex mb2">
-      <div class="glossier-rights flex mb2">
-        <p style="margin-bottom: 0;">&copy; 2024 Glossier. All rights reserved.</p>
-        <a href="#">Privacy Policy</a>
-        <a href="#">US State Privacy Notice</a>
-        <a href="#">Terms of Use</a>
-      </div>
-   
-      <div class="characters">
-        <img src="https://glossier-prod.imgix.net/files/smile_wave_black_lg.png?auto=compress,format&cs=srgb&w=720" alt="img19">
-        
-      </div>
-    </div>
-    <div class="glossier-rights flex">
-      <a href="#">Accessibility</a>
-      <a href="#">Supply Chain Transparency</a>
-      <a href="#" style="font-size: 16px;">Cookie Preferences</a>
-    </div>
-  </footer> 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <script src="js/register.js"></script>

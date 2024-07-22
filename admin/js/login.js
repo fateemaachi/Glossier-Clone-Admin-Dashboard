@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  const baseURL = "http://ecommerce.reworkstaging.name.ng/v2";
   // The input event triggers whenever the user types or modifies the input field content.
 $('#email, #password').on('click', function() {
   $(this).css('border-bottom', '0.5px solid black');
@@ -16,8 +17,8 @@ $('#email, #password').on('blur', function() {
 //   window.location.href = 'register.html'
 // });
 
-let user = JSON.parse(localStorage.getItem("formData"));
-  console.log(user);
+// let user = JSON.parse(localStorage.getItem("formData"));
+//   console.log(user);
 
 // The submit event handler for #regForm remains intact, performing the form validation and submission logic
 $('#regForm').on('submit', function(event){
@@ -45,17 +46,25 @@ $('#regForm').on('submit', function(event){
   }
 
    // Check username and password
-   if (valid && (email !== user.email || password !== user.password)) {
-    valid = false;
-   $('#errEmail').show();
-   $('#errPass').show();
-   $('#email').css('border-bottom', '0.5px solid red');
-   $('#password').css('border-bottom', '0.5px solid red');
-}
+//    if (valid && (email !== user.email || password !== user.password)) {
+//     valid = false;
+//    $('#errEmail').show();
+//    $('#errPass').show();
+//    $('#email').css('border-bottom', '0.5px solid red');
+//    $('#password').css('border-bottom', '0.5px solid red');
+// }
 
   if(valid){
-    alert('Login successful');
-    window.location.href = 'index.html';
+    $.ajax({
+      url: `${baseURL}/merchants/login`,
+      method: "POST",
+      data: {email, password},
+      success: function (response) {
+        localStorage.setItem("merchantDetails", JSON.stringify(response));
+        alert("Login successful");
+        window.location.href = "index.html";
+      },
+    });
   }
  
 });

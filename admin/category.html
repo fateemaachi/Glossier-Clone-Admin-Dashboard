@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/eba01fdb8d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="./style/shared.css" />
+    <link rel="stylesheet" href="./style/category.css">
+    <!-- <link rel="stylesheet" href="style/shared.css"> -->
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="categoryContainer">
+      <aside>
+        <div class="top">
+          <div class="logo">
+            <h2 style="font-style: italic; margin: 0">Glossier.</h2>
+          </div>
+          <div class="close" id="close-btn">
+            <span class="material-symbols-outlined">close</span>
+          </div>
+        </div>
+        <div class="sidebar">
+          <a href="index.html">
+            <span class="material-symbols-outlined">grid_view</span>
+            <h3>Dashboard</h3>
+          </a>
+          <a href="#">
+            <span class="material-symbols-outlined">person</span>
+            <h3>Customers</h3>
+          </a>
+          <a href="#">
+            <span class="material-symbols-outlined">receipt_long</span>
+            <h3>Orders</h3>
+          </a>
+          <a href="category.html" class="active">
+            <span class="material-symbols-outlined">insights</span>
+            <h3>Categories</h3>
+          </a>
+          <a href="#">
+            <span class="material-symbols-outlined">mail</span>
+            <h3>Messages</h3>
+            <span class="message-count">26</span>
+          </a>
+          <a href="#">
+            <span class="material-symbols-outlined">inventory</span>
+            <h3>Products</h3>
+          </a>
+          <a href="#">
+            <span class="material-symbols-outlined">report</span>
+            <h3>Reports</h3>
+          </a>
+          <a href="#">
+            <span class="material-symbols-outlined">settings</span>
+            <h3>Settings</h3>
+          </a>
+          <a href="#">
+            <span class="material-symbols-outlined">favorite</span>
+            <h3>Likes</h3>
+          </a>
+          <a href="#">
+            <span class="material-symbols-outlined">logout</span>
+            <h3>Logout</h3>
+          </a>
+        </div>
+      </aside>
+      <!------------------END OF ASIDE------------------->
+      <main class="category">
+        <div class="flex justify-between">
+          <h1>Categories</h1>
+          <div class="add-category" id="addBtn">
+            <span class="material-symbols-outlined">add</span>
+            <h3>Add Category</h3>
+          </div>
+        </div>
+        <!------------------END OF INSIGHTS---------------------->
+        <div class="recent-orders">
+          <table>
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Product Name</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="categoryTable"></tbody>
+          </table>
+          <!-- <a href="#">Show All</a> -->
+        </div>
+      </main>
+      <!----------------END OF MAIN--------------------->
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button id="cancel">Cancel</button>
+          <button id="addCat">Add Category</button>
+        </div>
+        <div class="modal-body">
+          <div class="mb">
+            <label for="productName">Name</label>
+            <input type="text" id="catName" size="80" required />
+          </div>
+          <div class="mb">
+            <label for="uploadImage">Product Image</label>
+            <input type="text" id="catImage" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="./js/category.js"></script>
+  </body>
+</html>

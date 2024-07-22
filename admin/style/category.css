@@ -1,0 +1,30 @@
+/* category */
+.categoryContainer {
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+}
+.category {
+  padding: 40px;
+}
+.catImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.add-category {
+  background: transparent;
+  border: 2px dashed var(--color-primary);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+  padding: 1.4rem var(--card-padding);
+  border-radius: var(--border-radius-3);
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}

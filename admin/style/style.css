@@ -505,7 +505,7 @@ input[type="text"] {
   border-radius: 4px;
   outline: none;
 }
-#cancel, #add{
+#cancel, #add, #addCat{
   background-color: #222c;
   color: #fff;
   padding: 8px 35px;
