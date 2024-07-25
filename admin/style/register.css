@@ -10,6 +10,7 @@ body{
   font-size: 14px;
   font-weight: 400;
   position: relative;
+ 
 }
 /*header*/
 header{
@@ -30,13 +31,40 @@ header a, span{
   padding: 5px 15px;
 }
 .registration{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 120px;
+  margin: auto;
+  width: 90%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 50px;
 }
+.regImage{
+  width: 80%;
+  height: 500px;
+  background-image: url('https://glossier-prod.imgix.net/files/glossier-homepage-complexion-module-02.png?auto=compress,format&cs=srgb&w=720');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.regform-cont{
+  max-height: 80%;
+  overflow-y: scroll;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f8f8f8; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e2e1e1; 
+}
+
 .registration h2{
   margin-bottom: 30px;
   margin-right: 200px;

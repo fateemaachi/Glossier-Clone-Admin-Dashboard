@@ -9,6 +9,9 @@ $(document).ready(function () {
   const $themeToggler = $(".theme-toggler");
   const $modal = $("#myModal");
 
+  // name setting
+
+  $('#userName').text(merchant.first_name)  
   //get categories
   $.ajax({
     url: `${baseURL}/categories?merchant_id=${merchant.id}`,

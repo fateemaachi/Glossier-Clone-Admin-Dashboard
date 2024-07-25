@@ -89,10 +89,16 @@ small{
   font-size: 0.75rem;
 }
 .profile-photo{
+  background-color: white;
   width: 2.8rem;
   height: 2.8rem;
   border-radius: 50%;
   overflow: hidden;
+  cursor: pointer;
+}
+.profile-photo span{
+  margin-right: 8px;
+  margin-top: 6px;
 }
 .text-muted{
   color: var(--color-info-dark);
@@ -355,7 +361,8 @@ main .recent-orders a{
 }
 .right .top .profile{
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
+  align-items: center;
   text-align: right;
 }
 /*========RECENT UPDATES=========*/

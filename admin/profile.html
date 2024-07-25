@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://kit.fontawesome.com/eba01fdb8d.js"
+  crossorigin="anonymous"
+></script>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+/>
+<link rel="stylesheet" href="style/profile.css">
+<title>Profile Details</title>
+</head>
+<body>
+  <div class="details-cont">
+    <aside>
+      <div class="top">
+        <div class="logo">
+          <h2 style="font-style: italic; margin: 0">Glossier.</h2>
+        </div>
+        <div class="close" id="close-btn">
+          <span class="material-symbols-outlined">close</span>
+        </div>
+      </div>
+      <div class="sidebar">
+        <a href="index.html" class="active">
+          <span class="material-symbols-outlined">grid_view</span>
+          <h3>Dashboard</h3>
+        </a>
+        <a href="#">
+          <span class="material-symbols-outlined">person</span>
+          <h3>Customers</h3>
+        </a>
+        <a href="#">
+          <span class="material-symbols-outlined">receipt_long</span>
+          <h3>Orders</h3>
+        </a>
+        <a href="category.html">
+          <span class="material-symbols-outlined">insights</span>
+          <h3>Categories</h3>
+        </a>
+        <a href="#">
+          <span class="material-symbols-outlined">mail</span>
+          <h3>Messages</h3>
+          <span class="message-count">26</span>
+        </a>
+        <a href="#">
+          <span class="material-symbols-outlined">inventory</span>
+          <h3>Products</h3>
+        </a>
+        <a href="#">
+          <span class="material-symbols-outlined">report</span>
+          <h3>Reports</h3>
+        </a>
+        <a href="#">
+          <span class="material-symbols-outlined">settings</span>
+          <h3>Settings</h3>
+        </a>
+        <a href="#">
+          <span class="material-symbols-outlined">favorite</span>
+          <h3>Likes</h3>
+        </a>
+        <a id="logout">
+          <span class="material-symbols-outlined">logout</span>
+          <h3>Logout</h3>
+        </a>
+      </div>
+    </aside>
+    <div class="profile-details">
+      <div  class="profile-photo" id="profilePic">
+       <div>
+        <span class="material-symbols-outlined">
+          person
+          </span>
+       </div>
+        </div>
+        <div class="dets-form">
+          <form id="regForm" >
+            <div class="firstname mb">
+              <input type="text" placeholder="First Name" id="fName" size="60">
+              <p id="errfName" class="hide">Please enter a first name</p>
+            </div>
+            <div class="lastname mb">
+              <input type="text" placeholder="Last Name" id="lName" size="60">
+              <p id="errlName" class="hide">Please enter a last name</p>
+            </div>
+            <div class="email2 mb">
+              <input type="text" placeholder="Email" id="email2" size="60">
+              <p id="errEmail" class="hide">Please enter an email</p>
+            </div>
+            <div class="number mb">
+              <input type="text" placeholder="Mobile Number" id="number" size="60">
+              <p id="errNum" class="hide">Please enter a valid international phone number</p>
+            </div>
+            <div class="storename mb">
+              <input type="text" placeholder=" Store Name" id="storeName" size="60">
+              <p id="errsName" class="hide">Please enter a store name</p>
+            </div>
+            <div class="descp mb">
+              <input type="text" placeholder="enter description" id="descp" size="60">
+              <p id="errDescp" class="hide">Please enter a store description</p>
+            </div>
+            <div class="icon mb">
+              <input type="text" placeholder="enter icon" id="icon" size="60">
+              <p id="errIcon" class="hide">Please enter a store icon</p>
+            </div>
+            <div class="banner mb">
+              <input type="text" placeholder="enter banner image" id="banner" size="60">
+              <p id="errBanner" class="hide">Please enter a store banner</p>
+            </div>
+            <div class="secNum mb ">
+              <input type="text" placeholder="Other Numbers" id="numbers" size="60">
+              <p id="errNum" class="hide">Please enter a valid international phone number</p>
+            </div>
+            <div class="password mb">
+              <input type="password" placeholder="Password" id="password" size="60">
+              <p id="errPass" class="hide">Please enter a password</p>
+              <p id="errPass2" class="hide">Password not correct</p>
+            </div>
+            
+            <div class="info-btn flex ">
+              <button type="submit" class="fbtn3 mr">submit</button>
+             
+            </div>
+            
+        
+          </form>
+        </div>
+    </div>
+  </div>
+  <script src="js/profile.js"></script>
+</body>
+</html>
