@@ -78,11 +78,14 @@
       <div  class="profile-photo" id="profilePic">
        <div>
         <span class="material-symbols-outlined">
-          person
-          </span>
+          person_edit
+          </span>   
        </div>
+          <h2 id="profileName"></h2>
         </div>
+
         <div class="dets-form">
+          <h1>Contact Info</h1>
           <form id="regForm" >
             <div class="firstname mb">
               <input type="text" placeholder="First Name" id="fName" size="60">
@@ -105,37 +108,162 @@
               <p id="errsName" class="hide">Please enter a store name</p>
             </div>
             <div class="descp mb">
-              <input type="text" placeholder="enter description" id="descp" size="60">
+              <input type="text" placeholder="Enter description" id="descp" size="60">
               <p id="errDescp" class="hide">Please enter a store description</p>
             </div>
             <div class="icon mb">
-              <input type="text" placeholder="enter icon" id="icon" size="60">
+              <input type="text" placeholder="Enter icon" id="icon" size="60">
               <p id="errIcon" class="hide">Please enter a store icon</p>
             </div>
             <div class="banner mb">
-              <input type="text" placeholder="enter banner image" id="banner" size="60">
+              <input type="text" placeholder="Enter banner image" id="banner" size="60">
               <p id="errBanner" class="hide">Please enter a store banner</p>
+            </div>
+            <div class="state mb">
+              <input type="text" placeholder="Enter state" id="state" size="60">
+              <p id="errState" class="hide">Please enter a state</p>
+            </div>
+            <div class="distict mb">
+              <input type="text" placeholder="Enter district" id="district" size="60">
+              <p id="errDistrict" class="hide">Please enter a district</p>
+            </div>
+            <div class="twitter mb">
+              <input type="text" placeholder="Enter twitter handle" id="twitter" size="60">
+              <p id="errTwitter" class="hide">Please enter a twitter handle</p>
+            </div>
+            <div class="facebook mb">
+              <input type="text" placeholder="Enter facebook handle" id="facebook" size="60">
+              <p id="errfacebook" class="hide">Please enter a facebook handle</p>
+            </div>
+            <div class="instagram mb">
+              <input type="text" placeholder="Enter instagram handle" id="instagram" size="60">
+              <p id="errinstagram" class="hide">Please enter a instagram handle</p>
             </div>
             <div class="secNum mb ">
               <input type="text" placeholder="Other Numbers" id="numbers" size="60">
               <p id="errNum" class="hide">Please enter a valid international phone number</p>
             </div>
-            <div class="password mb">
-              <input type="password" placeholder="Password" id="password" size="60">
-              <p id="errPass" class="hide">Please enter a password</p>
-              <p id="errPass2" class="hide">Password not correct</p>
-            </div>
-            
-            <div class="info-btn flex ">
-              <button type="submit" class="fbtn3 mr">submit</button>
-             
-            </div>
-            
-        
           </form>
         </div>
+          
+        <div class="pass-form">
+          <div class="flex">
+            <h1>Contact Info</h1>
+            <span class="material-symbols-outlined" id="ediT">
+              edit
+              </span>
+          </div>
+          <form id="passForm">
+            <div class="pass mb">
+              <input type="password" placeholder="Enter old password" id="pass" size="60">
+              <p id="errPass" class="hide">Please enter old password</p>
+            </div>
+            <div class="pass2 mb">
+              <input type="password" placeholder="Enter old password" id="pass2" size="60">
+              <p id="errPass2" class="hide">Please enter old password</p>
+            </div>
+          </form>
+        </div>
+        
     </div>
   </div>
+
+   <!-- The Modal -->
+   <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button id="cancel">Cancel</button>
+        <button id="add">Add changes</button>
+      </div>
+      <div class="modal-body">
+        <div class="firstname mb">
+          <input type="text" placeholder="First Name" id="fName" size="60">
+          <p id="errfName" class="hide">Please enter a first name</p>
+        </div>
+        <div class="lastname mb">
+          <input type="text" placeholder="Last Name" id="lName" size="60">
+          <p id="errlName" class="hide">Please enter a last name</p>
+        </div>
+        <div class="email2 mb">
+          <input type="text" placeholder="Email" id="email2" size="60">
+          <p id="errEmail" class="hide">Please enter an email</p>
+        </div>
+        <div class="number mb">
+          <input type="text" placeholder="Mobile Number" id="number" size="60">
+          <p id="errNum" class="hide">Please enter a valid international phone number</p>
+        </div>
+        <div class="storename mb">
+          <input type="text" placeholder=" Store Name" id="storeName" size="60">
+          <p id="errsName" class="hide">Please enter a store name</p>
+        </div>
+        <div class="descp mb">
+          <input type="text" placeholder="Enter description" id="descp" size="60">
+          <p id="errDescp" class="hide">Please enter a store description</p>
+        </div>
+        <div class="icon mb">
+          <input type="text" placeholder="Enter icon" id="icon" size="60">
+          <p id="errIcon" class="hide">Please enter a store icon</p>
+        </div>
+        <div class="banner mb">
+          <input type="text" placeholder="Enter banner image" id="banner" size="60">
+          <p id="errBanner" class="hide">Please enter a store banner</p>
+        </div>
+        <div class="state mb">
+          <input type="text" placeholder="Enter state" id="state" size="60">
+          <p id="errState" class="hide">Please enter a state</p>
+        </div>
+        <div class="distict mb">
+          <input type="text" placeholder="Enter district" id="district" size="60">
+          <p id="errDistrict" class="hide">Please enter a district</p>
+        </div>
+        <div class="twitter mb">
+          <input type="text" placeholder="Enter twitter handle" id="twitter" size="60">
+          <p id="errTwitter" class="hide">Please enter a twitter handle</p>
+        </div>
+        <div class="facebook mb">
+          <input type="text" placeholder="Enter facebook handle" id="facebook" size="60">
+          <p id="errfacebook" class="hide">Please enter a facebook handle</p>
+        </div>
+        <div class="instagram mb">
+          <input type="text" placeholder="Enter instagram handle" id="instagram" size="60">
+          <p id="errinstagram" class="hide">Please enter a instagram handle</p>
+        </div>
+        <div class="secNum mb ">
+          <input type="text" placeholder="Other Numbers" id="numbers" size="60">
+          <p id="errNum" class="hide">Please enter a valid international phone number</p>
+        </div>
+        <div class="info-btn flex ">
+          <button type="submit" class="fbtn3 mr">submit</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+     <!-- The Modal2 -->
+     <div id="myModal2" class="modal2">
+      <!-- Modal content -->
+      <div class="modal-content2">
+        <div class="modal-header2">
+          <button id="cancel2">Cancel</button>
+          <button id="add2">Add changes</button>
+        </div>
+        <div class="modal-body2">
+          <div class="pass mb">
+            <input type="password" placeholder="Enter old password" id="pass" size="60">
+            <p id="errPass" class="hide">Please enter old password</p>
+          </div>
+          <div class="pass2 mb">
+            <input type="password" placeholder="Enter old password" id="pass2" size="60">
+            <p id="errPass2" class="hide">Please enter old password</p>
+          </div>
+          <div class="info-btn flex ">
+            <button type="submit" class="fbtn3 mr">submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
   <script src="js/profile.js"></script>
 </body>
 </html>
