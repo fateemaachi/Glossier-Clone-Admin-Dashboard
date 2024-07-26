@@ -6,6 +6,11 @@ $(document).ready(function () {
   let categoryId = "";
   let categories = [];
 
+  //close modal
+  $("#cancelDel").on("click", function () {
+    $("#confirmDelete").hide();
+  });
+
   function validateFields(data) {
     if (data.name === "" && data.image === "") {
       valid = false;
@@ -73,13 +78,13 @@ $(document).ready(function () {
       display.append(`<tr data-id="${cat.id}" class="catItem">
       <td class="flex justify-center"><img src="${cat.image}" alt="${cat.name}" class="catImage"></td>
       <td class="primary">${cat.name}</td>
+      <td class="primary"><i class="fa-regular fa-pen-to-square edit"></i><i class="fa-solid fa-trash delete" style="color: #e21212;margin-left:20px"></i></td>
     </tr>`);
     });
   }
 
-  $(document).on("click", ".catItem", function () {
-    const id = $(this).data("id");
-
+  $(document).on("click", ".edit", function () {
+    const id = $(this).closest('.catItem').data("id");
     const categoryExists = categories.find((item) => item.id === id);
     if (categoryExists) {
       $("#catName").val(categoryExists.name);
@@ -88,5 +93,34 @@ $(document).ready(function () {
       categoryId = id;
       $("#addCat").html("Update Category");
     }
+  });
+  $(document).on("click", ".delete", function () {
+    const id = $(this).closest('.catItem').data("id");
+
+    const categoryExists = categories.find((item) => item.id === id);
+    if (categoryExists) {
+      $("#confirmDelete").show();
+      categoryId = id;
+    }
+  });
+
+  $("#deleteCat").click(function () {
+    $.ajax({
+      url: `${baseURL}/categories/${categoryId}`,
+      method: "DELETE",
+      success: function (res) {
+        console.log(res)
+        alert("Category deleted successfully");
+        categoryId = "";
+        $("#confirmDelete").hide();
+        getCategories();
+      }
+    })
+  })
+
+
+  $("#logout").on("click", function () {
+    // localStorage.removeItem("merchantDetails");
+    window.location.href = "login.html";
   });
 });

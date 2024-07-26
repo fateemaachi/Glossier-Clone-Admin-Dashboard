@@ -194,4 +194,8 @@ $(document).ready(function () {
     $("#tick").prop("checked", false);
     $("#cbMsg, .number").hide();
   }
+  $("#logout").on("click", function () {
+    localStorage.removeItem("merchantDetails");
+    window.location.href = "login.html";
+  });
 });

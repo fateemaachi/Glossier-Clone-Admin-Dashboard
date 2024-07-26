@@ -223,7 +223,7 @@ aside .sidebar .message-count{
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
-#regForm input, #passForm input{
+#regForm h4, #passForm h4{
   padding: 10px;
   outline: none;
   border: .5px solid rgb(206, 206, 206);
