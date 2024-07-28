@@ -11,7 +11,7 @@ $(document).ready(function () {
 
   // name setting
 
-  $('#userName').text(merchant.first_name)  
+  $("#userName").text(merchant.first_name);
   //get categories
   $.ajax({
     url: `${baseURL}/categories?merchant_id=${merchant.id}`,
@@ -58,7 +58,6 @@ $(document).ready(function () {
     </tr>`);
     });
   }
-
 
   function displatCatFilter(categories) {
     const display = $("#catFilter");
@@ -121,17 +120,19 @@ $(document).ready(function () {
   $("#add").on("click", function () {
     let images = [];
     let locations = [];
-    let location = $(".shipLocation").val();
-    if (location !== "") {
-      locations.push(location);
-      console.log(locations);
-    }
+    let allLocations = document.querySelectorAll(".shipLocation");
+    let allImages = document.querySelectorAll(".productImage");
 
-    let img = $("#productImage").val();
-
-    if (img !== "") {
-      images.push(img);
-    }
+    allImages.forEach((image) => {
+      if (image.value !== "") {
+        images.push(image.value.trim());
+      }
+    });
+    allLocations.forEach((location) => {
+      if (location.value !== "") {
+        locations.push(location.value.trim());
+      }
+    });
 
     function getBoolValue(val) {
       if (val === "true") {
@@ -171,6 +172,18 @@ $(document).ready(function () {
         $modal.hide();
       },
     });
+  });
+
+  $(document).on("click", ".addMoreImages", function () {
+    const display = $("#photoContainer");
+
+    display.append(`<input type="text" class="productImage" />`);
+  });
+
+  $(document).on("click", ".addMoreShip", function () {
+    const display = $("#shipContainer");
+
+    display.append(`<input type="text" class="shipLocation" />`);
   });
 
   // When the user clicks anywhere outside of the modal, close it

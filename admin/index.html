@@ -18,7 +18,7 @@
     />
 
     <link rel="stylesheet" href="style/style.css" />
-    <link rel="stylesheet" href="./style/shared.css">
+    <link rel="stylesheet" href="./style/shared.css" />
     <title>Dashboard</title>
   </head>
   <body>
@@ -118,14 +118,14 @@
         <!------------------END OF INSIGHTS---------------------->
         <div class="recent-orders">
           <div class="flex justify-between">
-          <h2>All Products</h2>
-          <div class="filterContainer">
-            <button class="filterBtn">Filter by Category</button>
-            <ul class="dropdown" id="catFilter">
-              <li class="showAllP">All Products</li>
-            </ul>
+            <h2>All Products</h2>
+            <div class="filterContainer">
+              <button class="filterBtn">Filter by Category</button>
+              <ul class="dropdown" id="catFilter">
+                <li class="showAllP">All Products</li>
+              </ul>
+            </div>
           </div>
-        </div>
           <table>
             <thead>
               <tr>
@@ -157,10 +157,8 @@
               <small class="text-muted">Admin</small>
             </div>
             <a href="profile.html" class="profile-photo" id="profilePic">
-              <span class="material-symbols-outlined">
-                person
-                </span>
-              </a>
+              <span class="material-symbols-outlined"> person </span>
+            </a>
           </div>
         </div>
         <!-----------END OF TOP------------->
@@ -276,11 +274,14 @@
           <button id="add">Add Product</button>
         </div>
         <div class="modal-body">
-          <div class="mb">
+          <div class="mb" id="photoContainer">
             <label for="uploadImage">Product Image</label>
-            <input type="text" id="productImage" />
+            <input type="text" class="productImage" />
           </div>
-          <div id="addMoreImages">add more images</div>
+          <div class="flex align-center addMoreImages">
+            <i class="fa-solid fa-plus" style="margin-right: 5px"></i>
+            <p>add more images</p>
+          </div>
           <div class="mb">
             <label for="productName">Title</label>
             <input
@@ -388,11 +389,14 @@
               <option value="false">false</option>
             </select>
           </div>
-          <div class="mb">
+          <div class="mb" id="shipContainer">
             <label for="shipLocation">Shipment</label>
             <input type="text" class="shipLocation" />
           </div>
-          <div class="addMoreShip">add more location</div>
+          <div class="addMoreShip flex align-center">
+            <i class="fa-solid fa-plus" style="margin-right: 5px"></i>
+            <p>add more locations</p>
+          </div>
         </div>
       </div>
     </div>
