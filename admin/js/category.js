@@ -11,6 +11,7 @@ $(document).ready(function () {
     $("#confirmDelete").hide();
   });
 
+  //validate fields
   function validateFields(data) {
     if (data.name === "" && data.image === "") {
       valid = false;
@@ -18,6 +19,8 @@ $(document).ready(function () {
       valid = true;
     }
   }
+
+  //add categories to modal
   $("#addCat").on("click", function () {
     const data = {
       merchant_id: merchant.id,
@@ -58,6 +61,7 @@ $(document).ready(function () {
     }
   });
 
+  // to get all categories
   function getCategories() {
     $.ajax({
       url: `${baseURL}/categories?merchant_id=${merchant.id}`,
@@ -70,6 +74,7 @@ $(document).ready(function () {
   }
   getCategories();
 
+  //dispay categories on webpage
   function displayCategories(categ) {
     const display = $("#categoryTable");
     display.empty();
@@ -83,6 +88,7 @@ $(document).ready(function () {
     });
   }
 
+  //edit categories
   $(document).on("click", ".edit", function () {
     const id = $(this).closest('.catItem').data("id");
     const categoryExists = categories.find((item) => item.id === id);
@@ -94,6 +100,8 @@ $(document).ready(function () {
       $("#addCat").html("Update Category");
     }
   });
+
+  //delete categories
   $(document).on("click", ".delete", function () {
     const id = $(this).closest('.catItem').data("id");
 
@@ -104,23 +112,48 @@ $(document).ready(function () {
     }
   });
 
-  $("#deleteCat").click(function () {
-    $.ajax({
-      url: `${baseURL}/categories/${categoryId}`,
-      method: "DELETE",
-      success: function (res) {
-        console.log(res)
-        alert("Category deleted successfully");
-        categoryId = "";
-        $("#confirmDelete").hide();
-        getCategories();
+  // check if catgeory has products
+  $.ajax({
+    url:`${baseURL}/categories/${categoryId}/products`,
+    method: 'GET',
+    success: function(response){
+      if(response.length > 0){
+        alert('Category cannot be deleted as it has a product attached.');
+        $('#confirmDelete').hide();
+      } else{
+        //delete categories
+        $.ajax({
+          url: `${baseURL}/categories/${categoryId}`,
+          method: "DELETE",
+          success: function (res) {
+            console.log(res)
+            alert("Category deleted successfully");
+            categoryId = "";
+            $("#confirmDelete").hide();
+            getCategories();
+          }
+        });
       }
-    })
-  })
+    }
+  });
+  
+  // $("#deleteCat").click(function () {
+  //   $.ajax({
+  //     url: `${baseURL}/categories/${categoryId}`,
+  //     method: "DELETE",
+  //     success: function (res) {
+  //       console.log(res)
+  //       alert("Category deleted successfully");
+  //       categoryId = "";
+  //       $("#confirmDelete").hide();
+  //       getCategories();
+  //     }
+  //   })
+  // })
 
-
+  //logout and move to home page
   $("#logout").on("click", function () {
-    // localStorage.removeItem("merchantDetails");
+    localStorage.removeItem("merchantDetails");
     window.location.href = "login.html";
   });
 });

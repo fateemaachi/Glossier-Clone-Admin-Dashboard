@@ -58,17 +58,17 @@
             <span class="material-symbols-outlined">inventory</span>
             <h3>Products</h3>
           </a>
-          <a href="#">
-            <span class="material-symbols-outlined">report</span>
-            <h3>Reports</h3>
+          <a href="review.html">
+            <span class="material-symbols-outlined">reviews</span>
+            <h3>Reviews</h3>
+          </a>
+          <a href="review.html">
+            <span class="material-symbols-outlined">favorite</span>
+            <h3>Likes</h3>
           </a>
           <a href="#">
             <span class="material-symbols-outlined">settings</span>
             <h3>Settings</h3>
-          </a>
-          <a href="#">
-            <span class="material-symbols-outlined">favorite</span>
-            <h3>Likes</h3>
           </a>
           <a id="logout">
             <span class="material-symbols-outlined">logout</span>
@@ -130,9 +130,10 @@
             <thead>
               <tr>
                 <th>Product Name</th>
-                <th>Product Price</th>
+                <th>Product Price </th>
                 <th>Product Description</th>
                 <th>Product Quantity</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody id="productTable"></tbody>
@@ -276,7 +277,7 @@
         <div class="modal-body">
           <div class="mb" id="photoContainer">
             <label for="uploadImage">Product Image</label>
-            <input type="text" class="productImage" />
+            <input type="text" class="productImage" style="margin-bottom: 20px;"/>
           </div>
           <div class="flex align-center addMoreImages">
             <i class="fa-solid fa-plus" style="margin-right: 5px"></i>
@@ -391,7 +392,7 @@
           </div>
           <div class="mb" id="shipContainer">
             <label for="shipLocation">Shipment</label>
-            <input type="text" class="shipLocation" />
+            <input type="text" class="shipLocation" style="margin-bottom: 20px;"/>
           </div>
           <div class="addMoreShip flex align-center">
             <i class="fa-solid fa-plus" style="margin-right: 5px"></i>
